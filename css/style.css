@@ -1,0 +1,54 @@
+@charset "utf-8";
+body{text-align:center;}
+.cabecera{height:300px; background-image:url(../img/001c.jpg);background-repeat:repeat-x;}
+.cabecera1{height:180px; background-image:url(../img/001f.jpg);background-repeat:repeat-x;}
+
+.contenedor-pie {
+    background-image: url("../img/007.jpg");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    height: 70px;
+	text-align: center;
+}
+
+a.mostaza {
+    color: #BD852D; text-decoration: none;
+}
+
+.edit-text{
+	background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    width: 350px;
+    font-size: 1em;
+    padding: 2px 0px 2px 0px;
+}
+
+.label-edit-text{
+    width: 200px;
+    float:left;
+    padding: 2px 2px 2px 2px;
+}
+
+
+.divtext{
+    padding: 10px 0px 10px 0px;
+    font-size: 1.2em;
+}
+
+
+.txt-azul{color:#0d648c; font-weight:bold;}
+.txt-rojo{color:#ff0000; font-weight:bold;}
+.txt-mostaza{color:#bd852d; font-weight:bold;}
+
+tr.prog td{background-color:#FFFFFF; font-size:11px; color:#000000; padding:2px; border: 1px solid #CCCCCC;}
+tr.prog th{background-color:#FFFFFF; font-size:11px; color:#000000; padding:2px; border: 1px solid #CCCCCC; font-weight:bold;}
+
+.txt-box input{background-color:#EEEEEE; width:120px; border: 1px solid #EEEEEE; text-align:center; font-size:11px; margin: 2px;}
+.txt-box-600 input{background-color:#EEEEEE; width:700px; border: 1px solid #EEE; text-align:center; font-size:11px; margin: 2px;}
+.ddl-menu-year select{background-color:#EEEEEE; width:200px; border: 1px solid #000; font-size:11px;}
+.ddl-menu select{background-color:#EEEEEE; width:600px; border: 1px solid #000; font-size:11px;}
+
+.hover{
+	cursor:pointer;
+	color:#0099FF;
+}
