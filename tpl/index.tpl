@@ -81,7 +81,6 @@
                 <h4 style="color:blue">Ingreso al sistema</h4>
                 <br>
 	            <div class="four columns alpha">
-
 	                <form action="process_login.php" method="post" name="login_form">
 	                 <label for="usuario">Usuario</label>
 	                 <input type="text" id="user" name="user">

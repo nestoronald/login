@@ -27,9 +27,7 @@ if(isset($_POST['user'], $_POST['p'],$_POST['mail'],$_POST['np'])) {
         $newpassword = $_POST['np']; // The hashed new password.
         $email = $_POST['mail']; // The hashed new password.
 
-	if(login($user, $password, $dbh) == false) {
-            // Login success
-            if($_SESSION['email']!=$email){
+	if(login_exist($user, $email, $dbh) == false) {
 
                 $mailHeader = 'MIME-Version: 1.0' . "\r\n";
                 $mailHeader .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -40,16 +38,12 @@ if(isset($_POST['user'], $_POST['p'],$_POST['mail'],$_POST['np'])) {
                 // $message .= "<p>&oacute; escriba la siguiente direcci&oacute;n en su navegador:</p>";
                 // $message .= "<p>http://app.igp.gob.pe/igpshared/confirmNewPass.php?id=".$_SESSION['user_id']."&mc=$hashMailConfirm</p>";
                 updateNewPassword($user, $email, $newpassword, $dbh);
-                sendUserMail($user, $password, $email, $dbh, $mailHeader, $title);
-
-
-            header('Location: ./admin.php?e='.$hash0);
-            }
-            else{
-                // Login failed
-		header('Location: ./admin.php?e='.$hash1);
-
-            }
+                if (sendUserMail($user, $password, $email, $dbh, $mailHeader, $title)) {
+                    header('Location: ./admin.php?e='.$hash0);
+                }
+                else{
+                    header('Location: ./admin.php?e='.$hash2);
+                }
 
 	} else {
 		// Login failed

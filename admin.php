@@ -26,11 +26,11 @@
                 // if ($check) {
                 //     $message= "<div class='error'>Usuario no debe de estar vacio</div>";
                 // }
-                if ($check0){
-                        $message= "<div class='notice'>Para completar el registro debe darle click al enlace de confirmación que se envió a su correo. </div>";
-                }
                 if ($check1){
                         $message= "<div class='error'>Usuario y/o correo,  ya están registrados</div>";
+                }
+                if ($check0){
+                        $message= "<div class='notice'>Para completar el registro debe darle click al enlace de confirmación que se envió a su correo. </div>";
                 }
                 if ($check2){
                         $message= "<div class='error'>No se enviaron los datos necesarios</div>";
