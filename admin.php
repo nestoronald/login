@@ -47,37 +47,9 @@
     }
 
 	$smarty = new Smarty;
-        $smarty->assign("message",  manageError());
+    $smarty->assign("message",  manageError());
 	$smarty->display('tpl/admin.tpl');
 
-
-/*
-
-
-<?php
-
-	require ("../class/dbconnect.php");
-
-	if (isset($_POST["p"])){
-		$username = $_POST["user"];
-		$email = "cndg@igp.gob.pe";
-		// Create a random salt
-		$random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
-		// Create salted password (Careful not to over season)
-		$password = hash('sha512', $_POST["p"].$random_salt);
-
-		// Add your insert to database script here.
-		// Make sure you use prepared statements!
-                $dbh = conx("shared","wmaster","igpwmaster");
-		if ($insert_stmt = $dbh->prepare("INSERT INTO members (username, email, password, salt) VALUES (?, ?, ?, ?)")) {
-			// Execute the prepared query.
-			$insert_stmt->execute(array( $username, $email, $password, $random_salt));
-		}
-	}
-?>
-
- *
- */
 
 ?>
 
