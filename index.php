@@ -2,17 +2,17 @@
 	require ('../class/dbconnect.php');
 	require ('../class/smarty/Smarty.class.php');
 	require ("../class/PasswordHash.php");
-	
+
 	function manageError(){
-	
+
 		if(isset($_GET["e"])){
-	
+
 			$t_hasher = new PasswordHash(8, FALSE);
 			$hash = $_GET["e"];
 			$check1 = $t_hasher->CheckPassword('loginfailed', $hash);
 			$check2 = $t_hasher->CheckPassword('incorrectpost', $hash);
 			$check3 = $t_hasher->CheckPassword('nosession', $hash);
-	
+
 			if ($check1){
 				return "<div class=error>Usuario / Clave no validos</div>";
 			}
@@ -27,10 +27,8 @@
 			return "";
 		}
 	}
-	
-	
-	
+
 	$smarty = new Smarty;
 	$smarty->display('tpl/index.tpl');
-	
+
 ?>

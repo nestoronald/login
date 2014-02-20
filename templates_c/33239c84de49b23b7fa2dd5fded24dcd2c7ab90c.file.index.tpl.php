@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-02-13 15:20:13
+<?php /* Smarty version Smarty-3.1.11, created on 2014-02-20 15:03:07
          compiled from "tpl/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:182556182051bb92b5336515-54126659%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '33239c84de49b23b7fa2dd5fded24dcd2c7ab90c' => 
     array (
       0 => 'tpl/index.tpl',
-      1 => 1392304809,
+      1 => 1392842074,
       2 => 'file',
     ),
   ),
@@ -102,7 +102,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <h4 style="color:blue">Ingreso al sistema</h4>
                 <br>
 	            <div class="four columns alpha">
-
 	                <form action="process_login.php" method="post" name="login_form">
 	                 <label for="usuario">Usuario</label>
 	                 <input type="text" id="user" name="user">
